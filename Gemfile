@@ -14,8 +14,13 @@ gem 'puma', '~> 3.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 gem 'fast_jsonapi'
+gem 'simplecov', require: false, group: :test
+gem 'faraday'
+gem 'figaro'
+gem 'json'
+gem 'csv'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -49,6 +54,12 @@ end
 group :test do
   gem "nyan-cat-formatter"
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'nyan-cat-formatter'
+  gem 'rspec-rails'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 
