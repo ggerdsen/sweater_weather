@@ -7,11 +7,18 @@ class HourlyWeather
               :icon
   
   def initialize(data)
-    @time = Time.at(data.first[:dt]).strftime("%k:%M:%S")
-    @wind_speed = get_cardinal_direction(data.first[:wind_speed])
-    @wind_direction = data.first[:wind_direction]
-    @conditions = data.first[:weather].first[:description]
-    @icon = data.first[:weather].first[:icon]
+      @time = Time.at(data[:dt]).strftime("%k:%M:%S")
+      @wind_speed = data[:wind_speed]
+      @wind_direction = get_cardinal_direction(data[:wind_deg])
+      @conditions = data[:weather].first[:description]
+      @icon = data[:weather].first[:icon]
+      @temperature = data[:temp]
+  end
+  
+  def self.new_hour(data)
+    data.first(8).map do |hour|
+      HourlyWeather.new(hour)
+    end
   end
   
   def get_cardinal_direction(wind_degrees)
