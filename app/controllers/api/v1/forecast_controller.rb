@@ -1,8 +1,7 @@
 class Api::V1::ForecastController < ApplicationController
   def show
-    binding.pry
-    weather_data = ForecastFacade.new(search_params[:location])
-    
+    weather_data = ForecastFacade.search(search_params[:location])
+    render json: weather_data
   end
   
   private
