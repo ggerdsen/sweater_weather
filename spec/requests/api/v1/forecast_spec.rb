@@ -47,16 +47,56 @@ describe "Forecast" do
   end
   
   it "Hourly Weather" do
-    attributes = @forecast[:data][:attributes][:daily_weather]
+    attributes = @forecast[:data][:attributes][:hourly_weather]
     expect(attributes).to be_a(Array)
     attributes.each do |attribute|
-      expect(attribute[:date]).to be_a(String)
-      expect(attribute[:sunrise]).to be_a(String)
-      expect(attribute[:sunset]).to be_a(String)
-      expect(attribute[:max_temp]).to be_a(Float)
-      expect(attribute[:min_temp]).to be_a(Float)
+      expect(attribute[:time]).to be_a(String)
+      expect(attribute[:wind_speed]).to be_a(Float)
+      expect(attribute[:wind_direction]).to be_a(String)
       expect(attribute[:conditions]).to be_a(String)
       expect(attribute[:icon]).to be_a(String)
+      expect(attribute[:temperature]).to be_a(Float)
     end
+  end
+  
+  it "Only requested data is returned" do
+    current_attributes = @forecast[:data][:attributes][:current_weather]
+    daily_attributes = @forecast[:data][:attributes][:daily_weather]
+    hourly_attributes = @forecast[:data][:attributes][:hourly_weather]
+    expect(current_attributes).to_not have_key(:dt)
+    expect(current_attributes).to_not have_key(:pressure)
+    expect(current_attributes).to_not have_key(:dew_point)
+    expect(current_attributes).to_not have_key(:clouds)
+    expect(current_attributes).to_not have_key(:wind_speed)
+    expect(current_attributes).to_not have_key(:wind_deg)
+    
+    
+    daily_attributes.each do |day|
+      expect(day).to_not have_key(:dt)
+      expect(day).to_not have_key(:temp)
+      expect(day).to_not have_key(:feels_like)
+      expect(day).to_not have_key(:pressure)
+      expect(day).to_not have_key(:humidity)
+      expect(day).to_not have_key(:dewpoint)
+      expect(day).to_not have_key(:wind_speed)
+      expect(day).to_not have_key(:wind_deg)
+      expect(day).to_not have_key(:weather)
+      expect(day).to_not have_key(:clouds)
+      expect(day).to_not have_key(:pop)
+      expect(day).to_not have_key(:uvi)
+    end
+    
+    hourly_attributes.each do |day|
+      expect(day).to_not have_key(:dt)
+      expect(day).to_not have_key(:temp)
+      expect(day).to_not have_key(:feels_like)
+      expect(day).to_not have_key(:pressure)
+      expect(day).to_not have_key(:humidity)
+      expect(day).to_not have_key(:dewpoint)
+      expect(day).to_not have_key(:wind_deg)
+      expect(day).to_not have_key(:weather)
+      expect(day).to_not have_key(:pop)
+    end
+
   end
 end
