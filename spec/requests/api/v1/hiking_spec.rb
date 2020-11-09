@@ -18,8 +18,6 @@ describe "Hiking" do
     expect(@response[:data][:attributes]).to have_key(:location)
     expect(@response[:data][:attributes]).to have_key(:forecast)
     expect(@response[:data][:attributes]).to have_key(:trails)
-
-    #
     
   end
 end
