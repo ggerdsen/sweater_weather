@@ -11,7 +11,7 @@ class TrailData
     @type = "trail"
     @location = location_info
     @forecast = parse_forecast(forecast_info)
-    @trails = map_info
+    @trails = parse_trails(map_info)
   end
   
   def parse_forecast(forecast)
@@ -19,6 +19,20 @@ class TrailData
     parsed[:summary] = forecast.conditions
     parsed[:temperature] = forecast.temperature.to_s
     parsed
+  end
+  
+  def parse_trails(trails)
+    parsed = Hash.new
+    parsed_array = []
+    trails.each do |trail|
+      parsed[:name] = trail[:name]
+      parsed[:summary] = trail[:summary]
+      parsed[:difficulty] = trail[:difficulty]
+      parsed[:location] = trail[:location]
+      parsed[:distance_to_trail] = trail[:distance_to_trail].to_s
+      parsed_array << parsed
+    end
+    parsed_array
   end
   
 end
