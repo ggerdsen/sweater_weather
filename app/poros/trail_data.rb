@@ -1,5 +1,11 @@
 class TrailData
   
+  attr_reader :id,
+              :type,
+              :location,
+              :forecast,
+              :trails
+  
   def initialize(location_info, forecast_info, map_info)
     @id = nil
     @type = "trail"
