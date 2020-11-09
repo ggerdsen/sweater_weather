@@ -22,6 +22,7 @@ describe "Hiking" do
     expect(@response[:data][:attributes][:forecast]).to be_a(Hash)
     expect(@response[:data][:attributes][:forecast][:summary]).to be_a(String)
     expect(@response[:data][:attributes][:forecast][:temperature]).to be_a(String)
+    
     expect(@response[:data][:attributes][:forecast]).to_not have_key(:conditions)
     expect(@response[:data][:attributes][:forecast]).to_not have_key(:datetime)
     expect(@response[:data][:attributes][:forecast]).to_not have_key(:feels_like)
@@ -46,8 +47,25 @@ describe "Hiking" do
       expect(trail).to have_key(:distance_to_trail)
       expect(trail[:distance_to_trail]).to be_a(String)
       
+      expect(trail).to_not have_key(:type)
+      expect(trail).to_not have_key(:stars)
+      expect(trail).to_not have_key(:starVotes)
+      expect(trail).to_not have_key(:url)
+      expect(trail).to_not have_key(:imgSqSmall)
+      expect(trail).to_not have_key(:imgSmall)
+      expect(trail).to_not have_key(:imgSmallMed)
+      expect(trail).to_not have_key(:imgMedium)
+      expect(trail).to_not have_key(:length)
+      expect(trail).to_not have_key(:ascent)
+      expect(trail).to_not have_key(:descent)
+      expect(trail).to_not have_key(:high)
+      expect(trail).to_not have_key(:low)
+      expect(trail).to_not have_key(:longitude)
+      expect(trail).to_not have_key(:latitude)
+      expect(trail).to_not have_key(:conditionStatus)
+      expect(trail).to_not have_key(:conditionDetails)
+      expect(trail).to_not have_key(:conditionDate)
       
-      # binding.pry
       
     end
   end
