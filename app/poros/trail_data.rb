@@ -1,5 +1,4 @@
 class TrailData
-  
   attr_reader :id,
               :type,
               :location,
@@ -17,7 +16,8 @@ class TrailData
   def parse_forecast(forecast)
     parsed = Hash.new
     parsed[:summary] = forecast.conditions
-    parsed[:temperature] = forecast.temperature.to_s
+    binding.pry
+    parsed[:temperature] = forecast.temperature.round(0).to_s
     parsed
   end
   
