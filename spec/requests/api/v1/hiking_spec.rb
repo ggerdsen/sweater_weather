@@ -65,8 +65,7 @@ describe "Hiking" do
       expect(trail).to_not have_key(:conditionStatus)
       expect(trail).to_not have_key(:conditionDetails)
       expect(trail).to_not have_key(:conditionDate)
-      
-      
     end
+    
   end
 end

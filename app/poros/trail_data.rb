@@ -30,6 +30,7 @@ class TrailData
       parsed[:location] = trail[:location]
       parsed[:distance_to_trail] = trail[:distance_to_trail].to_s
       parsed_array << parsed
+      parsed = Hash.new
     end
     parsed_array
   end
