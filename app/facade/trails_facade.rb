@@ -4,7 +4,6 @@ class TrailsFacade
     lat_long = CoordinatesService.get_lat_long(search_params)
     lat = parsed_lat(lat_long)
     long = parsed_long(lat_long)
-    binding.pry
     TrailsService.find_trails(lat, long)
   end
   

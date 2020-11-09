@@ -58,4 +58,299 @@ http_interactions:
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}}]}]}'
   recorded_at: Mon, 09 Nov 2020 16:35:39 GMT
+- request:
+    method: get
+    uri: https://www.hikingproject.com/data/get-trails?key=200969732-1d8c1b0fbd5f729e7f0e157d436860e7&lat=39.738453&lon=-104.984853&maxDistance=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 09 Nov 2020 16:44:58 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private
+      Pragma:
+      - no-cache
+      X-Ap-Request-Id:
+      - 3211df9f-65e3-413a-af8b-df8f651c23b2
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1920'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "trails": [
+                {
+                    "id": 7008385,
+                    "name": "Highline Canal Trail",
+                    "type": "Recommended Route",
+                    "summary": "Widely recognized as one of the best urban trails in the country.",
+                    "difficulty": "green",
+                    "stars": 4.5,
+                    "starVotes": 14,
+                    "location": "Roxborough Park, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7008385\/highline-canal-trail",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7007020_sqsmall_1554321989.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7007020_small_1554321989.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7007020_smallMed_1554321989.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7007020_medium_1554321989.jpg",
+                    "length": 61.3,
+                    "ascent": 369,
+                    "descent": -468,
+                    "high": 5549,
+                    "low": 5435,
+                    "longitude": -105.0908,
+                    "latitude": 39.487,
+                    "conditionStatus": "Unknown",
+                    "conditionDetails": null,
+                    "conditionDate": "1970-01-01 00:00:00"
+                },
+                {
+                    "id": 7003386,
+                    "name": "Green Mountain Tour",
+                    "type": "Recommended Route",
+                    "summary": "A good hike with easy Front Range access.  Some steep climbs, rocks and nice views.",
+                    "difficulty": "blue",
+                    "stars": 3.8,
+                    "starVotes": 28,
+                    "location": "West Pleasant View, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7003386\/green-mountain-tour",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_sqsmall_1554311770.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_small_1554311770.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_smallMed_1554311770.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_medium_1554311770.jpg",
+                    "length": 5.4,
+                    "ascent": 909,
+                    "descent": -900,
+                    "high": 6854,
+                    "low": 6132,
+                    "longitude": -105.1524,
+                    "latitude": 39.6903,
+                    "conditionStatus": "All Clear",
+                    "conditionDetails": "Dry - with 8 miles before starting to check miles.",
+                    "conditionDate": "2020-08-18 18:48:26"
+                },
+                {
+                    "id": 7027595,
+                    "name": "Mount Carbon Loop",
+                    "type": "Recommended Route",
+                    "summary": "A great hike on smooth trails.",
+                    "difficulty": "blue",
+                    "stars": 3.5,
+                    "starVotes": 24,
+                    "location": "Morrison, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7027595\/mount-carbon-loop",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7029016_sqsmall_1554919742.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7029016_small_1554919742.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7029016_smallMed_1554919742.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7029016_medium_1554919742.jpg",
+                    "length": 6.8,
+                    "ascent": 447,
+                    "descent": -448,
+                    "high": 5737,
+                    "low": 5512,
+                    "longitude": -105.1744,
+                    "latitude": 39.6514,
+                    "conditionStatus": "All Clear",
+                    "conditionDetails": "Dry",
+                    "conditionDate": "2020-10-24 09:52:28"
+                },
+                {
+                    "id": 7018092,
+                    "name": "Denver Zoo",
+                    "type": "Recommended Route",
+                    "summary": "A stroll through the Denver Zoo. Admission fees charged to access this trail",
+                    "difficulty": "green",
+                    "stars": 4.5,
+                    "starVotes": 2,
+                    "location": "Denver, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7018092\/denver-zoo",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7017883_sqsmall_1554829956.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7017883_small_1554829956.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7017883_smallMed_1554829956.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7017883_medium_1554829956.jpg",
+                    "length": 2.6,
+                    "ascent": 41,
+                    "descent": -42,
+                    "high": 5289,
+                    "low": 5254,
+                    "longitude": -104.9489,
+                    "latitude": 39.7503,
+                    "conditionStatus": "Unknown",
+                    "conditionDetails": null,
+                    "conditionDate": "1970-01-01 00:00:00"
+                },
+                {
+                    "id": 7011837,
+                    "name": "City Park Loop",
+                    "type": "Recommended Route",
+                    "summary": "An easy escape from the hustle and bustle of Denver's city limits.",
+                    "difficulty": "green",
+                    "stars": 3.8,
+                    "starVotes": 6,
+                    "location": "Denver, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7011837\/city-park-loop",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7011510_sqsmall_1554559518.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7011510_small_1554559518.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7011510_smallMed_1554559518.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7011510_medium_1554559518.jpg",
+                    "length": 3.3,
+                    "ascent": 56,
+                    "descent": -55,
+                    "high": 5301,
+                    "low": 5255,
+                    "longitude": -104.9567,
+                    "latitude": 39.7495,
+                    "conditionStatus": "Unknown",
+                    "conditionDetails": null,
+                    "conditionDate": "1970-01-01 00:00:00"
+                },
+                {
+                    "id": 7091962,
+                    "name": "Green Mountain Summit Loop",
+                    "type": "Recommended Route",
+                    "summary": "A climb around the ridge of Green Mountain Trail with some detours.",
+                    "difficulty": "blue",
+                    "stars": 3,
+                    "starVotes": 3,
+                    "location": "West Pleasant View, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7091962\/green-mountain-summit-loop",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_sqsmall_1554311770.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_small_1554311770.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_smallMed_1554311770.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_medium_1554311770.jpg",
+                    "length": 7.7,
+                    "ascent": 878,
+                    "descent": -878,
+                    "high": 6838,
+                    "low": 6143,
+                    "longitude": -105.1522,
+                    "latitude": 39.6906,
+                    "conditionStatus": "Unknown",
+                    "conditionDetails": null,
+                    "conditionDate": "1970-01-01 00:00:00"
+                },
+                {
+                    "id": 7004549,
+                    "name": "Green Mountain Trail",
+                    "type": "Trail",
+                    "summary": "A trail that circumnavigates Green Mountain with great views of the city and other mountains.",
+                    "difficulty": "blue",
+                    "stars": 3.9,
+                    "starVotes": 33,
+                    "location": "West Pleasant View, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7004549\/green-mountain-trail",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_sqsmall_1554311770.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_small_1554311770.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_smallMed_1554311770.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7005260_medium_1554311770.jpg",
+                    "length": 6.5,
+                    "ascent": 997,
+                    "descent": -984,
+                    "high": 6831,
+                    "low": 6092,
+                    "longitude": -105.1524,
+                    "latitude": 39.6903,
+                    "conditionStatus": "All Clear",
+                    "conditionDetails": "Dry",
+                    "conditionDate": "2020-10-13 19:02:35"
+                },
+                {
+                    "id": 7020640,
+                    "name": "Cheesman Park",
+                    "type": "Trail",
+                    "summary": "Nice trail in the city.",
+                    "difficulty": "green",
+                    "stars": 4.1,
+                    "starVotes": 8,
+                    "location": "Denver, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7020640\/cheesman-park",
+                    "imgSqSmall": "",
+                    "imgSmall": "",
+                    "imgSmallMed": "",
+                    "imgMedium": "",
+                    "length": 1.1,
+                    "ascent": 44,
+                    "descent": -45,
+                    "high": 5364,
+                    "low": 5335,
+                    "longitude": -104.9669,
+                    "latitude": 39.7334,
+                    "conditionStatus": "Unknown",
+                    "conditionDetails": null,
+                    "conditionDate": "1970-01-01 00:00:00"
+                },
+                {
+                    "id": 7073054,
+                    "name": "Bear Creek Trail",
+                    "type": "Trail",
+                    "summary": "A great paved trail connecting the South Platte Trail in Englewood to Morrison and several open spaces in the area.",
+                    "difficulty": "greenBlue",
+                    "stars": 4.3,
+                    "starVotes": 3,
+                    "location": "Sheridan, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7073054\/bear-creek-trail",
+                    "imgSqSmall": "",
+                    "imgSmall": "",
+                    "imgSmallMed": "",
+                    "imgMedium": "",
+                    "length": 14.9,
+                    "ascent": 806,
+                    "descent": -277,
+                    "high": 5804,
+                    "low": 5269,
+                    "longitude": -105.0081,
+                    "latitude": 39.6516,
+                    "conditionStatus": "Unknown",
+                    "conditionDetails": null,
+                    "conditionDate": "1970-01-01 00:00:00"
+                },
+                {
+                    "id": 7014332,
+                    "name": "Farmers Highline Canal Trail",
+                    "type": "Trail",
+                    "summary": "Farmers Highline Canal Trail Passing through Westminster, Northglenn, and Thornton.",
+                    "difficulty": "green",
+                    "stars": 4,
+                    "starVotes": 5,
+                    "location": "Northglenn, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7014332\/farmers-highline-canal-trail",
+                    "imgSqSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7020497_sqsmall_1554838460.jpg",
+                    "imgSmall": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7020497_small_1554838460.jpg",
+                    "imgSmallMed": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7020497_smallMed_1554838460.jpg",
+                    "imgMedium": "https:\/\/cdn2.apstatic.com\/photos\/hike\/7020497_medium_1554838460.jpg",
+                    "length": 12.8,
+                    "ascent": 417,
+                    "descent": -161,
+                    "high": 5540,
+                    "low": 5284,
+                    "longitude": -104.9687,
+                    "latitude": 39.9283,
+                    "conditionStatus": "Unknown",
+                    "conditionDetails": null,
+                    "conditionDate": "1970-01-01 00:00:00"
+                }
+            ],
+            "success": 1
+        }
+  recorded_at: Mon, 09 Nov 2020 16:44:59 GMT
 recorded_with: VCR 6.0.0
