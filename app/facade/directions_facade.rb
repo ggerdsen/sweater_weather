@@ -2,7 +2,8 @@ class DirectionsFacade
   
   def self.search(location, trails_data)
     @start = CoordinatesService.get_lat_long(location)[:results][0][:locations][0][:latLng]
-    #adds distance to trail to each trail
+    
+    #adds distance to trail to each trail here
     trails_data[:trails].each do |trail|
       finish = parsed_lat_long(trail)
       trail[:distance_to_trail] = DirectionsService.get_distance(@start, finish)
@@ -16,5 +17,4 @@ class DirectionsFacade
     lat_long[:lng] = trail[:longitude]
     lat_long
   end
-
 end

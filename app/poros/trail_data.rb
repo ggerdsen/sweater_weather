@@ -16,7 +16,6 @@ class TrailData
   def parse_forecast(forecast)
     parsed = Hash.new
     parsed[:summary] = forecast.conditions
-    binding.pry
     parsed[:temperature] = forecast.temperature.round(0).to_s
     parsed
   end

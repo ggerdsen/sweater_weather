@@ -22,6 +22,15 @@ describe "Hiking" do
     expect(@response[:data][:attributes][:forecast]).to be_a(Hash)
     expect(@response[:data][:attributes][:forecast][:summary]).to be_a(String)
     expect(@response[:data][:attributes][:forecast][:temperature]).to be_a(String)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:conditions)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:datetime)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:feels_like)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:humidity)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:icon)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:sunrise)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:sunset)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:uvi)
+    expect(@response[:data][:attributes][:forecast]).to_not have_key(:visibility)
     
     expect(@response[:data][:attributes]).to have_key(:trails)
     
@@ -36,6 +45,10 @@ describe "Hiking" do
       expect(trail[:location]).to be_a(String)
       expect(trail).to have_key(:distance_to_trail)
       expect(trail[:distance_to_trail]).to be_a(String)
+      
+      
+      # binding.pry
+      
     end
   end
 end
