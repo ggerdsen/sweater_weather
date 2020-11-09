@@ -7,7 +7,6 @@ describe "Hiking" do
       expect(response.status).to eq(200)
       expect(response).to be_successful
       @response = JSON.parse(response.body, symbolize_names: true)
-      
     end
   end
   
