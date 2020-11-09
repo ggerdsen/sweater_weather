@@ -1,9 +1,7 @@
 class DirectionsFacade
   
-  def self.search(location, trails_data, current_weather)
-    @forecast = current_weather
+  def self.search(location, trails_data)
     @start = CoordinatesService.get_lat_long(location)[:results][0][:locations][0][:latLng]
-    
     #adds distance to trail to each trail
     trails_data[:trails].each do |trail|
       finish = parsed_lat_long(trail)
