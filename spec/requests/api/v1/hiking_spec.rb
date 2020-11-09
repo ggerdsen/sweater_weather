@@ -10,4 +10,16 @@ describe "Hiking" do
       
     end
   end
+  
+  it "Hiking Data JSON Response" do
+    
+    expect(@response[:data][:type]).to eq ("trail")
+    expect(@response[:data]).to have_key(:attributes)
+    expect(@response[:data][:attributes]).to have_key(:location)
+    expect(@response[:data][:attributes]).to have_key(:forecast)
+    expect(@response[:data][:attributes]).to have_key(:trails)
+
+    #
+    
+  end
 end
