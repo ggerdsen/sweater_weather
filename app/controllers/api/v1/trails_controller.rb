@@ -6,7 +6,8 @@ class Api::V1::TrailsController < ApplicationController
     map_info = DirectionsFacade.search(search_params[:location], trails_info, forecast_info.current_weather)
     trails = TrailData.new(search_params[:location], forecast_info.current_weather, map_info)
 
-    binding.pry
+    render json: TrailSerializer.new(trails)
+
     
   end
   
