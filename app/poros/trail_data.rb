@@ -10,8 +10,15 @@ class TrailData
     @id = "null"
     @type = "trail"
     @location = location_info
-    @forecast = forecast_info
+    @forecast = parse_forecast(forecast_info)
     @trails = map_info
+  end
+  
+  def parse_forecast(forecast)
+    parsed = Hash.new
+    parsed[:summary] = forecast.conditions
+    parsed[:temperature] = forecast.temperature.to_s
+    parsed
   end
   
 end
