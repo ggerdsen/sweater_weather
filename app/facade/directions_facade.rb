@@ -9,11 +9,6 @@ class DirectionsFacade
       finish = parsed_lat_long(trail)
       trail[:distance_to_trail] = DirectionsService.get_distance(@start, finish)
     end
-    # end =
-    # lat_long = CoordinatesService.get_lat_long(location)
-    # lat = parsed_lat(lat_long)
-    # long = parsed_long(lat_long)
-    # DirectionsService.get_distance(start, end)
   end
   
   #creates lat/long hash in same format as CoordinatesService lat/long

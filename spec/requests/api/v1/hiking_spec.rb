@@ -18,13 +18,13 @@ describe "Hiking" do
     expect(@response[:data][:attributes]).to have_key(:location)
     expect(@response[:data][:attributes][:location]).to eq("denver,co")
     
-    
     expect(@response[:data][:attributes]).to have_key(:forecast)
     expect(@response[:data][:attributes][:forecast]).to be_a(Hash)
     expect(@response[:data][:attributes][:forecast][:summary]).to be_a(String)
     expect(@response[:data][:attributes][:forecast][:temperature]).to be_a(String)
     
     expect(@response[:data][:attributes]).to have_key(:trails)
+    
     @response[:data][:attributes][:trails].each do |trail|
       expect(trail).to have_key(:name)
       expect(trail[:name]).to be_a(String)
@@ -37,7 +37,5 @@ describe "Hiking" do
       expect(trail).to have_key(:distance_to_trail)
       expect(trail[:distance_to_trail]).to be_a(String)
     end
-    
-    
   end
 end
