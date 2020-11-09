@@ -4,10 +4,10 @@ class DirectionsFacade
     @forecast = current_weather
     @start = CoordinatesService.get_lat_long(location)[:results][0][:locations][0][:latLng]
     
-    #adds distance to trail to each trail 
+    #adds distance to trail to each trail
     trails_data[:trails].each do |trail|
       finish = parsed_lat_long(trail)
-      trail[:distance] = DirectionsService.get_distance(@start, finish)
+      trail[:distance_to_trail] = DirectionsService.get_distance(@start, finish)
     end
     # end =
     # lat_long = CoordinatesService.get_lat_long(location)
