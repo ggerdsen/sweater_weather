@@ -22,8 +22,5 @@ class CurrentWeather
     @visibility = data[:visibility]
     @conditions = data[:weather].first[:description]
     @icon = data[:weather].first[:icon]
-    
-    
-     # "http://openweathermap.org/img/wn/#{data[:weather].first[:icon]}.png" 
   end
 end
