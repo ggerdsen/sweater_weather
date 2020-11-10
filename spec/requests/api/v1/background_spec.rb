@@ -10,7 +10,7 @@ describe "Background Endpoint" do
     end
   end
   
-  it "returns the url to an appropriate background image for a location" do
+  it "can return a backround image relavant to my search" do
 
     expect(background[:data]).to be_a(Hash)
 
