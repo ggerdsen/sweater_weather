@@ -9,7 +9,7 @@ class SearchFacade
   
   def self.search_backgrounds(search_params)
     backgrounds = BackgroundsService.get_background(search_params)
-    BackgroundData.new(backgrounds)
+    BackgroundData.new(backgrounds, search_params)
   end
   
   def self.parsed_lat(lat_long)
