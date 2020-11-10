@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.unsplash.com/search/photos/client_id=yN2IKvsD4jTYpI7E69s6U2a9BoVahvmbe-PD44kQUxs&query=denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - Varnish
+      Retry-After:
+      - '0'
+      Location:
+      - https://api.unsplash.com/search/photos/client_id=yN2IKvsD4jTYpI7E69s6U2a9BoVahvmbe-PD44kQUxs&query=denver,co
+      Content-Length:
+      - '0'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 10 Nov 2020 21:34:07 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - close
+      X-Served-By:
+      - cache-den19622-DEN
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1605044048.505383,VS0,VE0
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 10 Nov 2020 21:34:07 GMT
+recorded_with: VCR 6.0.0
