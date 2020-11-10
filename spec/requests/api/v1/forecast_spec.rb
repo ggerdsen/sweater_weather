@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Forecast" do
+describe "Forecast Endpoint" do
   before :each do
     VCR.use_cassette("forecast_data", allow_playback_repeats: true, :record => :new_episodes) do
       get "/api/v1/forecast?location=denver,co"
