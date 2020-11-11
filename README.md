@@ -1,5 +1,7 @@
 # README
 
+This application allows a user to plan out a trip, and see the weather forecast at the destination based upon their time of arrival.
+
 # Endpoints
 ### 1a. Retrieve Weather for a City Request
 ```
