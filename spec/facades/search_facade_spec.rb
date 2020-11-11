@@ -7,19 +7,26 @@ RSpec.describe SearchFacade do
       location = SearchFacade.search_forecast("denver,co")
       expect(location.current_weather).to be_a(CurrentWeather)
       expect(location.current_weather.conditions).to be_a(String)
-      expect(location.current_weather.conditions).to eq("clear sky")
+      expect(location.current_weather.conditions).to eq("few clouds")
       expect(location.current_weather.feels_like).to be_a(Float)
-      expect(location.current_weather.feels_like).to eq(36.57)
+      expect(location.current_weather.feels_like).to eq(29.53)
       expect(location.current_weather.humidity).to be_a(Integer)
-      expect(location.current_weather.humidity).to eq(30)
+      expect(location.current_weather.humidity).to eq(35)
       expect(location.current_weather.icon).to be_a(String)
-      expect(location.current_weather.icon).to eq("01d")
+      expect(location.current_weather.icon).to eq("02d")
       expect(location.current_weather.temperature).to be_a(Float)
-      expect(location.current_weather.temperature).to eq(43.2)
+      expect(location.current_weather.temperature).to eq(42.62)
       expect(location.current_weather.uvi).to be_a(Float)
       expect(location.current_weather.uvi).to eq(2.41)
       expect(location.current_weather.visibility).to be_a(Integer)
       expect(location.current_weather.visibility).to eq(10000)
+      
+      lat_long = CoordinatesService.get_lat_long("denver,co")
+      
+      expect(SearchFacade.parsed_lat(lat_long)).to be_a(Float)
+      expect(SearchFacade.parsed_lat(lat_long)).to eq(39.738453)
+      expect(SearchFacade.parsed_long(lat_long)).to be_a(Float)
+      expect(SearchFacade.parsed_long(lat_long)).to eq(-104.984853)
     end
   end
   
