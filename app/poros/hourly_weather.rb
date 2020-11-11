@@ -4,7 +4,8 @@ class HourlyWeather
               :wind_speed,
               :wind_direction,
               :conditions,
-              :icon
+              :icon,
+              :temperature
   
   def initialize(data)
       @time = Time.at(data[:dt]).strftime("%k:%M:%S")

@@ -1,7 +1,7 @@
 class ImageData
-  attr_reader :type,
-              :id,
-              :image
+  attr_reader :location,
+              :image_url,
+              :credit
   
   def initialize(data, search_params, author)
     @location = search_params
