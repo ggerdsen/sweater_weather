@@ -29,4 +29,21 @@ RSpec.describe 'User Registration' do
     expect(user_json[:data][:attributes]).to_not have_key(:password)
     expect(user_json[:data][:attributes]).to_not have_key(:password_confirmation)
   end
+  
+  xit 'An error is returned if registration information is invalid' do
+    user = {email: 'garrett@email.com',
+            password: 'password',
+            password_confirmation: '1234456'
+           }
+    header = {'CONTENT_TYPE' => 'application/json'}
+
+    binding.pry
+    post '/api/v1/users', headers: header, params: JSON.generate(user)
+    user_json = JSON.parse(response.body, symbolize_names: true)
+    user = User.last
+
+    expect(response).to be_successful
+    expect(response.status).to eq(400)
+  
+  end
 end
