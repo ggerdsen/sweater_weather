@@ -3,6 +3,8 @@ class Api::V1::SessionsController < ApplicationController
     user = User.find_by(email: session_params[:email])
     if user && user.authenticate(session_params[:password])
       render json: UserSerializer.new(user)
+    else
+      render json: "Invalid Credentials", status: 401
     end
   end
 
