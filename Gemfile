@@ -41,7 +41,6 @@ group :development, :test do
   gem 'capybara'
   gem 'faker'
   gem 'pry'
-  gem 'simplecov'
 end
 
 group :development do
@@ -56,8 +55,6 @@ group :test do
   gem "nyan-cat-formatter"
   gem 'shoulda-matchers', '~> 4.0'
   gem 'launchy'
-  gem 'nyan-cat-formatter'
-  gem 'rspec-rails'
   gem 'vcr'
   gem 'webmock'
 end
