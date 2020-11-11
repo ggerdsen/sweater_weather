@@ -1,7 +1,7 @@
 # README
 
 # Endpoints
-1a. Retrieve Weather for a City Request
+##1a. Retrieve Weather for a City Request
 ```
 GET /api/v1/forecast?location=denver,co
 Content-Type: application/json
