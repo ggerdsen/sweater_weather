@@ -7,13 +7,13 @@ GET /api/v1/forecast?location=denver,co
 Content-Type: application/json
 Accept: application/json
 ```
-1b. Background Image for the City Request
+### 1b. Background Image for the City Request
 ```
 GET /api/v1/backgrounds?location=denver,co
 Content-Type: application/json
 Accept: application/json
 ```
-2. User Registration Request
+### 2. User Registration Request
 ```
 POST /api/v1/users
 Content-Type: application/json
@@ -25,7 +25,7 @@ Accept: application/json
   "password_confirmation": "password"
 }
 ```
-3. Login Request  
+### 3. Login Request  
 ```
 POST /api/v1/sessions
 Content-Type: application/json
@@ -36,7 +36,7 @@ Accept: application/json
   "password": "password"
 }
 ```
-4. Road Trip Request  
+### 4. Road Trip Request  
 ```
 POST /api/v1/road_trip
 Content-Type: application/json
